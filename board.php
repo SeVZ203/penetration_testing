@@ -66,8 +66,9 @@ $conn->close();
         <ul>
         <?php while($row = $result->fetch_assoc()): ?>
             <li>
-                <h3><?php echo htmlspecialchars($row['title']); ?></h3>
-                <p><?php echo nl2br(htmlspecialchars($row['content'])); ?></p>
+                <!--취약하게 설정-->
+                <h3><?php echo ($row['title']); ?></h3>
+                <p><?php echo nl2br(($row['content'])); ?></p>
             </li>
         <?php endwhile; ?>
         </ul>
